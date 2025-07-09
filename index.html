@@ -1,13 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>cờ Việt Nam</title>
-</head>
-<body>
-    <img src="https://cdn.thuvienphapluat.vn/uploads/DanLuat-BanAn/2025/4/co-VN.jpg" alt="cờ Việt Nam" />
-    <p>Cờ Việt Nam là cơ đỏ sao vàng<br>là một trong những biểu tượng đáng tự hào nhất của người việt</b>
-        <a href="https://thuvienphapluat.vn/banan/tin-tuc/hinh-nen-co-to-quoc-viet-nam-dep-an-tuong-hinh-nen-la-co-nua-do-nua-xanh-giua-co-ngoi-sao-vang-15296">thông tin tham khảo</a>
-</body>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cờ Việt Nam</title>
+  </head>
+  <body>
+    <img
+      src="https://cdn.thuvienphapluat.vn/uploads/DanLuat-BanAn/2025/4/co-VN.jpg"
+      alt="cờ Việt Nam"
+    />
+    <pre>
+    <strong>Vietnam, my land of grace,
+Rice fields shining, rivers embrace.
+Lanterns glow in Hoi An’s night,
+Mountains whisper morning light.
+Friendly smiles in bustling streets,
+Taste of herbs and spicy treats.
+From Hanoi’s charm to Saigon’s run,
+Vietnam’s heart beats warm for everyone.</strong>
+    </pre>
+    <a href="https://thuvienphapluat.vn/banan/tin-tuc/hinh-nen-co-to-quoc-viet-nam-dep-an-tuong-hinh-nen-la-co-nua-do-nua-xanh-giua-co-ngoi-sao-vang-15296">Reference information</a>
+    <h1>History of formation and development of cities</h1>
+    <label for="citySelect">cities</label>
+    <select id="citySelect">
+      <option value="">--select-city--</option>
+      <option value="Hà Nội">Hà Nội</option>
+      <option value="Thành phố Hồ Chí Minh">Thành phố Hồ Chí Minh</option>
+      <option value="Thành Phố Đà Nẵng">Thành Phố Đà Nẵng</option>
+    </select>
+
+    <div id="cityDescription">
+      <!-- đoạn giới thiệu sẽ hiển thị ở đây -->
+    </div>
+
+    <script>
+      const citySelect = document.getElementById("citySelect"); <!---->
+      const cityDescription = document.getElementById("cityDescription");
+
+      const descriptions = {
+        "Hà Nội":
+          "Hanoi is the capital of a thousand years of civilization with many historical relics.",
+        "Thành phố Hồ Chí Minh":
+          "Ho Chi Minh City is the most vibrant economic center of Vietnam.",
+        "Thành Phố Đà Nẵng":
+          "Da Nang is famous for its beautiful beaches and friendly people.",
+      };
+
+      citySelect.addEventListener("change", function () {
+        const selectedCity = this.value;
+        if (descriptions[selectedCity]) {
+          cityDescription.textContent = descriptions[selectedCity];
+        } else {
+          cityDescription.textContent = "";
+        }
+      });
+    </script>
+  </body>
 </html>
